@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 nodejs(nodeJSInstallationName: 'Node 18.4.0'){
+                    sh 'npm install'
                     sh 'npm run build'
                 }
             }
