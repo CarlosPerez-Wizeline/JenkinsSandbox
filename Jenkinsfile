@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        nodejs 'LTS'
+    }
     stages {
         stage('Information'){
             steps {
